@@ -92,11 +92,11 @@ Make sure that the codes are in dbgen folder. Then set the file to execution mod
 $ chmod +x import_TPCH_to_MariaDB.sh
 ``` 
 
-To execute the import_TPCH_to_MariaDB.sh, you will need the full administrative privileges of a database user. This is usually root access.
+To execute the import_TPCH_to_MariaDB.sh, you will need the full administrative privileges of a database user. This is usually root access. On Shell type the following command.
 ```
-$ import_TPCH_to_MariaDB.sh root 
+$ ./import_TPCH_to_MariaDB.sh root 
 ```
-The system will ask for the database password. Once provided, the system will import the data into the database.
+The system will ask for the database password for root or the selected admin user. Once provided, the system will import the data into the database.
 The import_TPCH_to_MariaDB.sh  is simply executing the tpch_to_mariadb.sql script. In case the script does not work, The files can be manually edited to meet the requirements of the server 
 
 Once the make file is executed, TPC-H creates a folder in dbgen labelled queries that contains 22 queries for use to test the database. The queries require formatting for execution in MySQL and MariaDB.
