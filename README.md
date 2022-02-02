@@ -1,14 +1,13 @@
-# TPC-H Benchmark for MySQL and MariaDB
+# TPC-H Benchmark helper for MySQL and MariaDB
 
 
 The scripts hosted below are for implementing the TPC-H database, sample data and queries to MySQL and MariaDB Databases under Linux.
 TPC-H is a benchmark for Decision support made available by the Transaction Processing Performance Council (TPC). 
-ALL the necessary specifications and documentation for setting up the TPC-H database, generating data and queries are available on [TPC Website](http://tpc.org/tpc_documents_current_versions/current_specifications5.asp).
+ALL the necessary specifications and documentation for setting up the TPC-H database, generating data and queries are available on the [TPC Website (tpc.org)](http://tpc.org/tpc_documents_current_versions/current_specifications5.asp).
 The generated items are SQL compliant and can be ported to all major relational databases. While the system can generate data for major databases, support for MYSQL and MariaDB shall benefit from further documentation.
 This work is based on [
 Catarina Ribeiro's port to MySQL ](https://github.com/catarinaribeir0/queries-tpch-dbgen-mysql). The previous work dates back to 2016, which used version 2.16 of TPC-H and was meant mainly for Windows-based machines.Because Linux systems are more strict with case sensitivity of characters, the existing SQL queries available do not work under Linux.
-This work reviewed the SQL queries and created a script to make the task easier. All credits to the original author and the TPC team for making these tools available.
-
+This work reviewed the SQL queries and created a script to make the task easier. The script is only a helper to create the empty database structure,primary and foreign keys and import the generated data into a database.  All credits to the original author and the TPC team for making these tools available. Please consult the official documentation of TPC-H version 3.0.0 (published 18 February 2021).
 
 
 Implementation of TPC-H schema into MySQL and MariaDB. 
@@ -105,4 +104,4 @@ The GitHub repository has a folder labelled sample queries that contain sample q
 
 I hope this work becomes helpful to you.
 
-Riyad
+As a reminder, do go through the official documentation of TPC-H from TPC.org for more info on TPC-H
