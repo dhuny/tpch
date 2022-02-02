@@ -82,11 +82,15 @@ The generation of files will take some time. After completion, it will create a 
 $ ls -l *.tbl
 ``` 
 
-Use the import_TPCH_to_MariaDB.sh script from this git repository. First clone it inside your folder using the code below.
+Clone the tpch folder from this git repository. Inside the dbgen folder in shell type the code below.
 ```
-$ git clone import_TPCH_to_MariaDB.sh tpch_to_mariadb.sql
+$ git clone https://github.com/dhuny/tpch.git
 ``` 
  
+A new folder labelled tpch and contains 2 scripts required inside dbgen for execution. move them with the codes below 
+```
+$ mv ./tpch/import* tpch/tpch_* ./
+``` 
 Make sure that the codes are in dbgen folder. Then set the file to execution mode with chmod
 ```
 $ chmod +x import_TPCH_to_MariaDB.sh
