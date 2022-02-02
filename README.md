@@ -108,4 +108,4 @@ The GitHub repository has a folder labelled sample queries that contain sample q
 
 I hope this work helps you.
 
-All information related to TPC are available on the website tpc.org and in the official documentation of TPC-H.
+All information related to TPC & TPC-H are available on the website tpc.org and in the official documentation of TPC-H.
