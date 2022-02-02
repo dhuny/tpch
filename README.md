@@ -106,6 +106,7 @@ The import_TPCH_to_MariaDB.sh  is simply executing the tpch_to_mariadb.sql scrip
 Once the make file is executed, TPC-H creates a folder in dbgen labelled queries that contains 22 queries for use to test the database. The queries require formatting for execution in MySQL and MariaDB.
 The GitHub repository has a folder labelled sample queries that contain sample queries similar to the 22 generated ones. Users may refer to them to adapt their generated queries from the dbgen/queries folder for MySQL and MariaDB.
 
-I hope this work helps you.
 
 All information related to TPC & TPC-H are available on the website tpc.org and in the official documentation of TPC-H.
+
+I hope this work helps you.
