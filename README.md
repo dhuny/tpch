@@ -16,7 +16,7 @@ Implementation of TPC-H schema into MySQL and MariaDB.
 
 Move the zipped folder to /tmp of the target Linux server. The downloaded file usually ends with *-tpc-h-tool.zip
 ```
-$ mv *-tpc-h-tool.zip /tmp
+$ mv *-tpc-h-tool.zip /tmp/ && cd /tmp
 ``` 
 Unzip the downloaded file
 
@@ -26,7 +26,7 @@ $ unzip *-tpc-h-tool.zip
 
 Navigate through the command line to DBGEN folder  
 ```
-$ cd /tmp/*-tpc-h-tool/TPC-H_Tools_v*/dbgen/
+$ cd /tmp/TPC-H_Tools_v*/dbgen/
 ```  
 
 Type make -v and gcc -v on shell to detect if necessary tools are installed.
