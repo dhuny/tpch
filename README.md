@@ -100,6 +100,10 @@ To execute the import_TPCH_to_MariaDB.sh, you will need the full administrative 
 ```
 $ ./import_TPCH_to_MariaDB.sh root 
 ```
+Or alternatively to execute the import_TPCH_to_MariaDB_with_view.sh. The with view command will create the necessary view for query 15. Used in test cases where the driver cannot run the Create View followed by a select from View in one operation set.
+```
+$ ./import_TPCH_to_MariaDB_with_view.sh root 
+```
 The system will ask for the database password for root or the selected admin user. Once provided, the system will import the data into the database.
 The import_TPCH_to_MariaDB.sh  is simply executing the tpch_to_mariadb.sql script. In case the script does not work, The files can be manually edited to meet the requirements of the server 
 
