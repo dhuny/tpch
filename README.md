@@ -94,6 +94,7 @@ $ mv ./tpch/import* tpch/tpch_* ./
 Make sure that the codes are in dbgen folder. Then set the file to execution mode with chmod
 ```
 $ chmod +x import_TPCH_to_MariaDB.sh
+$ chmod +x import_TPCH_to_MariaDB_with_view.sh
 ``` 
 
 To execute the import_TPCH_to_MariaDB.sh, you will need the full administrative privileges of a database user. This is usually root access. On Shell type the following command.
