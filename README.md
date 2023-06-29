@@ -16,34 +16,34 @@ Implementation of TPC-H schema into MySQL and MariaDB.
 
 Move the zipped folder to /tmp of the target Linux server. The downloaded file usually ends with *-tpc-h-tool.zip
 ```
-$ mv *-tpc-h-tool.zip /tmp/ && cd /tmp
+mv *-tpc-h-tool.zip /tmp/ && cd /tmp
 ``` 
 Unzip the downloaded file
 
 ```
-$ unzip *-tpc-h-tool.zip
+unzip *-tpc-h-tool.zip
 ``` 
 
 Navigate through the command line to DBGEN folder  
 ```
-$ cd /tmp/TPC-H_Tools_v*/dbgen/
+cd /tmp/TPC-H_Tools_v*/dbgen/
 ```  
 
 Type make -v and gcc -v on shell to detect if necessary tools are installed.
 
 Install ‘make’ and ‘gcc’ if not available. If both are not present, the command below shall help in ubuntu
 ```
-$ sudo apt install make && sudo apt install gcc -y
+sudo apt install make && sudo apt install gcc -y
 ```  
 
 Make a copy of the dummy makefile  
 ```
-$ cp makefile.suite makefile
+cp makefile.suite makefile
 ```  
 
 Still, in the dbgen folder edit the makefile with the command below to use Nano or alternative text editor.
 ```
-$ sudo nano makefile
+sudo nano makefile
 ```  
  
 Find the values CC, DATABASE, MACHINE and WORKLOAD and change them as follows
@@ -69,41 +69,41 @@ Quit Nano or the text editor of choice by saving the changes.
 
 Inside the DBgen folder, run the make command.  
 ```
-$ make
+make
 ```  
 
 Generate the files for the population. The -s represents the scale factor which has properly defined values in TPC-H documentation and can be a minimum of 1, representing 1 GB. For testing purposes, 0.1 is used here, representing 100MB of data.  
 ```
-$ ./dbgen -s 0.1
+./dbgen -s 0.1
 ```  
 
 The generation of files will take some time. After completion, it will create a series of files ending with .tbl. To list them, type
-```
-$ ls -l *.tbl
+``
+ls -l *.tbl
 ``` 
 
 Clone the tpch folder from this git repository. Inside the dbgen folder in shell type the code below.
 ```
-$ git clone https://github.com/dhuny/tpch.git
+git clone https://github.com/dhuny/tpch.git
 ``` 
  
 A new folder labelled tpch and contains 2 scripts required inside dbgen for execution. move them with the codes below 
 ```
-$ mv ./tpch/import* tpch/tpch_* ./
+mv ./tpch/import* tpch/tpch_* ./
 ``` 
 Make sure that the codes are in dbgen folder. Then set the file to execution mode with chmod
 ```
-$ chmod +x import_TPCH_to_MariaDB.sh
-$ chmod +x import_TPCH_to_MariaDB_with_view.sh
+chmod +x import_TPCH_to_MariaDB.sh
+chmod +x import_TPCH_to_MariaDB_with_view.sh
 ``` 
 
 To execute the import_TPCH_to_MariaDB.sh, you will need the full administrative privileges of a database user. This is usually root access. On Shell type the following command.
 ```
-$ ./import_TPCH_to_MariaDB.sh root 
+./import_TPCH_to_MariaDB.sh root 
 ```
 Or alternatively to execute the import_TPCH_to_MariaDB_with_view.sh. The with view command will create the necessary view for query 15. Used in test cases where the driver cannot run the Create View followed by a select from View in one operation set.
 ```
-$ ./import_TPCH_to_MariaDB_with_view.sh root 
+./import_TPCH_to_MariaDB_with_view.sh root 
 ```
 The system will ask for the database password for root or the selected admin user. Once provided, the system will import the data into the database.
 The import_TPCH_to_MariaDB.sh  is simply executing the tpch_to_mariadb.sql script. In case the script does not work, The files can be manually edited to meet the requirements of the server 
