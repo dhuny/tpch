@@ -78,7 +78,7 @@ Generate the files for the population. The -s represents the scale factor which 
 ```  
 
 The generation of files will take some time. After completion, it will create a series of files ending with .tbl. To list them, type
-``
+```
 ls -l *.tbl
 ``` 
 
