@@ -101,7 +101,7 @@ To execute the import_TPCH_to_MariaDB.sh, you will need the full administrative 
 ```
 ./import_TPCH_to_MariaDB.sh root 
 ```
-The previous command, when executed on a Raspberry Pi 5 with an SF 1 takes more than 1 hours 20 minutes to complete. In the event that the database does not have a view similar to revenue15 in the database, the last part of the following script can be executed import_TPCH_to_MariaDB_with_view.sh. The with view command will create the necessary view for query 15. Used in test cases where the driver cannot run the Create View followed by a select from View in one operation set.
+The previous command, when executed on a Raspberry Pi 5 with an SF 1 takes more than 1 hours 20 minutes to complete. In the event that the database does not have a view similar to revenue15 in the database, the last part of the following script can be executed import_TPCH_to_MariaDB_with_view.sh. The 'with view' command will create the necessary view for query 15. Used in test cases where the driver cannot run the Create View followed by a select from View in one operation set.
 ```
 ./import_TPCH_to_MariaDB_with_view.sh root 
 ```
