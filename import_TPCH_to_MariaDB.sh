@@ -5,7 +5,7 @@ path="s|PATH|$dot|g"
 echo "Creating a database tpch, the necessary tables and importing the data";
 echo  "This will take a few minutes, please wait";
 
-sed -i $path tpch_to_mariadb.sql
+sed -i $path tpch_to_mariadb_lowercase.sql
 
 sudo mysql -u ${1?The script should be executed as follows: ./import_TPCH_to_MariaDB.sh <DB Username>} -p  < tpch_to_mariadb.sql
 
