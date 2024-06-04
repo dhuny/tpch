@@ -72,9 +72,9 @@ Inside the DBgen folder, run the make command.
 make
 ```  
 
-Generate the files for the population. The -s represents the scale factor which has properly defined values in TPC-H documentation and can be a minimum of 1, representing 1 GB. For testing purposes, 0.1 is used here, representing 100MB of data.  
+Generate the files for the population. The -s represents the scale factor (SF), which has properly defined values in TPC-H documentation and can be a minimum of 1, representing 1 GB. For testing purposes, 1 is used here, representing 1GB of data.TPC-H recommends (SF) values like 1, 10 and so on.   
 ```
-./dbgen -s 0.1
+./dbgen -s 1
 ```  
 
 The generation of files will take some time. After completion, it will create a series of files ending with .tbl. To list them, type
